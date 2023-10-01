@@ -1,0 +1,25 @@
+version: 0.2
+
+env:
+  variables:
+        TEST_VAR: "t2.micro"
+phases:
+  install:
+    commands:
+      - apt-get update -y
+  pre_build:
+    commands:
+      - echo Entered the pre_build phase...
+  build:
+    commands:
+      - ls -altr
+      - printenv
+      - echo $TEST_VAR
+      - echo $AWS_REGION
+      - echo $CODEBUILD_BUILD_NUMBER
+      - echo Entered the build phase
+    finally:
+      - echo This always runs even if the install command fails
+  post_build:
+    commands:
+      - echo Entered the post_build phase...
