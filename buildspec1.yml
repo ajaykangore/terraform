@@ -6,7 +6,7 @@ env:
 phases:
   install:
     commands:
-      - apt-get update -y
+      - yum update -y
   pre_build:
     commands:
       - echo Entered the pre_build phase...
