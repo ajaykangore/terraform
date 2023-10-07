@@ -23,6 +23,7 @@ phases:
       - sudo yum -y install terraform
       - terraform --version
       - terraform login
+      - yes
       - terraform init
       - terraform plan
     finally:
