@@ -22,6 +22,7 @@ phases:
       - sudo yum-config-manager --add-repo http://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
       - sudo yum -y install terraform
       - terraform --version
+      - terraform login
       - terraform init
       - terraform plan
     finally:
