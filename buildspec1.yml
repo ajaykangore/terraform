@@ -21,12 +21,6 @@ phases:
       - sudo yum install -y yum-utils
       - sudo yum-config-manager --add-repo http://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
       - sudo yum -y install terraform
-      - terraform --version
-      - terraform login
-      - prompted_command:
-        answer: yes
-      - terraform init
-      - terraform plan
     finally:
       - echo This always runs even if the install command fails
   post_build:
